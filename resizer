@@ -2,7 +2,6 @@
 from PIL import Image
 import glob, os, sys, getopt
 
-currentDir = os.getcwd()
 width = int(sys.argv[1])
 finalDir = sys.argv[2] + "/"
 
