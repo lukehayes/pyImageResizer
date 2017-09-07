@@ -4,8 +4,10 @@ from PIL import Image
 import glob, os, sys, getopt
 
 currentDir = os.getcwd()
-width = 1200
-finalDir = "Done/"
+width = int(sys.argv[1])
+finalDir = sys.argv[2]
+
+os.mkdir(finalDir)
 
 for i in glob.glob("*.jpg"):
 	img = Image.open(i)
