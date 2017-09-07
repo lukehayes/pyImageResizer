@@ -14,3 +14,5 @@ for i in glob.glob("*.jpg"):
 	fileType = os.path.splitext(i)[1]
 	rsz = img.resize((width,height))
 	rsz.save(finalDir + name + fileType)
+
+print("Resize completed!")
