@@ -15,5 +15,10 @@ for i in glob.glob("*.jpg"):
 	fileType = os.path.splitext(i)[1]
 	rsz = img.resize((width,height))
 	rsz.save(outputDir + name + fileType)
+	print(name + " resized...")
 
-print("Resize completed!")
+print(" ")
+print("------------------------------------")
+print("Resize completed! :)")
+print("------------------------------------")
+print(" ")
