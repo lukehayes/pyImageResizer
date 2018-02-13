@@ -3,13 +3,14 @@ from PIL import Image
 import glob, os, sys, getopt, argparse
 
 parser = argparse.ArgumentParser()
+
+# Create the flags for the script
 parser.add_argument('-i', '--imagedir', help='The location of the images to be resized.')
 parser.add_argument('-o', '--output', help='The output directory of the resized images.')
 parser.add_argument('-s', '--size', help='The width of the image. The height is calculated from that number so only width is needed.', type=int)
 
-# print(parser.imagedir)
-# print(parser.output)
-# print(parser.size)
+# Parse the new flags
+args = parser.parse_args()
 
 # # The location of the images to be resized
 # imageDir = sys.argv[1]
