@@ -13,7 +13,11 @@ parser.add_argument('-s', '--size', help='The width of the image. The height is 
 args = parser.parse_args()
 
 # Make the output directory
-os.mkdir(args.outputdir)
+if not os.path.exists(args.outputdir):
+	print("Creating output directory: " + args.outputdir)
+	os.mkdir(args.outputdir)
+else:
+	print("Directory: " + args.outputdir + " already exists. Moving on...")
 
 for i in glob.glob(args.imagedir + "/*.jpg"):
 	img = Image.open(i)
