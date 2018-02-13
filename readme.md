@@ -10,20 +10,16 @@ A very simple batch image resizer written in Python.
 ### Options
 ``` 
 --outputdir / -o
-``` 
-``` 
 -o 'myTestOutputDir'
 ``` 
+
 ``` 
 --imageDir / -i
-``` 
-``` 
 -i 'myImageDir'
 ``` 
+
 ``` 
 --width / -w
-``` 
-``` 
 -w 1000
 ``` 
 
