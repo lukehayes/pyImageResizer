@@ -3,9 +3,14 @@ from PIL import Image
 import glob, os, sys, getopt
 
 currentDir = os.getcwd()
+
+# Get the desired width from the first argument
 width = int(sys.argv[1])
+
+# The name of the output directory
 outputDir = sys.argv[2] + "/"
 
+# Make the output directory
 os.mkdir(outputDir)
 
 for i in glob.glob("*.jpg"):
