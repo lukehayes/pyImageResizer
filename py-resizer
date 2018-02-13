@@ -2,6 +2,7 @@
 from PIL import Image
 import glob, os, sys, getopt, argparse
 
+# Setup the parser for creating command line flags
 parser = argparse.ArgumentParser()
 
 # Create the flags for the script
