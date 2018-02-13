@@ -12,15 +12,6 @@ parser.add_argument('-s', '--size', help='The width of the image. The height is 
 # Parse the new flags
 args = parser.parse_args()
 
-# The location of the images to be resized
-imageDir = sys.argv[1]
-
-# Get the desired width from the first argument
-width = int(sys.argv[2])
-
-# The name of the output directory
-outputDir = sys.argv[3] + "/"
-
 # Make the output directory
 os.mkdir(args.output)
 
