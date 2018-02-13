@@ -22,7 +22,7 @@ else:
 for i in glob.glob(args.imagedir + "/*.jpg"):
 	img = Image.open(i)
 	height = args.size * img.size[1] / img.size[0]
-	name = os.path.splitext(i)[0]
+	name = os.path.basename(i)
 	fileType = os.path.splitext(i)[1]
 	rsz = img.resize((args.size,height))
 	rsz.save(args.outputdir + name + fileType)
