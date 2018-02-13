@@ -20,6 +20,7 @@ if not os.path.exists(args.outputdir):
 else:
 	print("Directory: " + args.outputdir + " already exists. Moving on...")
 
+# Loop through and resize each image found image
 for i in glob.glob(args.imagedir + "/*.jpg"):
 	img = Image.open(i)
 	height = args.size * img.size[1] / img.size[0]
