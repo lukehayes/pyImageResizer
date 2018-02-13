@@ -5,7 +5,7 @@ import glob, os, sys, getopt
 currentDir = os.getcwd()
 
 # The location of the images to be resized
-imageDir = sys.getArgv[1]
+imageDir = sys.argv[1]
 
 # Get the desired width from the first argument
 width = int(sys.argv[2])
@@ -16,7 +16,7 @@ outputDir = sys.argv[3] + "/"
 # Make the output directory
 os.mkdir(outputDir)
 
-for i in glob.glob("*.jpg"):
+for i in glob.glob(imageDir + "/*.jpg"):
 	img = Image.open(i)
 	height = width * img.size[1] / img.size[0]
 	name = os.path.splitext(i)[0]
