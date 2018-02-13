@@ -13,7 +13,7 @@ parser.add_argument('-s', '--size', help='The width of the image. The height is 
 args = parser.parse_args()
 
 # Make the output directory
-os.mkdir(args.output)
+os.mkdir(args.outputdir)
 
 for i in glob.glob(args.imagedir + "/*.jpg"):
 	img = Image.open(i)
@@ -21,7 +21,7 @@ for i in glob.glob(args.imagedir + "/*.jpg"):
 	name = os.path.splitext(i)[0]
 	fileType = os.path.splitext(i)[1]
 	rsz = img.resize((width,height))
-	rsz.save(args.ouput + name + fileType)
+	rsz.save(args.ouputdir + name + fileType)
 	print(name + " resized...")
 
 print(" ")
