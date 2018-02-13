@@ -8,10 +8,10 @@ currentDir = os.getcwd()
 imageDir = sys.getArgv[1]
 
 # Get the desired width from the first argument
-width = int(sys.argv[1])
+width = int(sys.argv[2])
 
 # The name of the output directory
-outputDir = sys.argv[2] + "/"
+outputDir = sys.argv[3] + "/"
 
 # Make the output directory
 os.mkdir(outputDir)
