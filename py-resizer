@@ -12,29 +12,29 @@ parser.add_argument('-s', '--size', help='The width of the image. The height is 
 # Parse the new flags
 args = parser.parse_args()
 
-# # The location of the images to be resized
-# imageDir = sys.argv[1]
+# The location of the images to be resized
+imageDir = sys.argv[1]
 
-# # Get the desired width from the first argument
-# width = int(sys.argv[2])
+# Get the desired width from the first argument
+width = int(sys.argv[2])
 
-# # The name of the output directory
-# outputDir = sys.argv[3] + "/"
+# The name of the output directory
+outputDir = sys.argv[3] + "/"
 
-# # Make the output directory
-# os.mkdir(outputDir)
+# Make the output directory
+os.mkdir(args.output)
 
-# for i in glob.glob(imageDir + "/*.jpg"):
-# 	img = Image.open(i)
-# 	height = width * img.size[1] / img.size[0]
-# 	name = os.path.splitext(i)[0]
-# 	fileType = os.path.splitext(i)[1]
-# 	rsz = img.resize((width,height))
-# 	rsz.save(outputDir + name + fileType)
-# 	print(name + " resized...")
+for i in glob.glob(args.imagedir + "/*.jpg"):
+	img = Image.open(i)
+	height = args.size * img.size[1] / img.size[0]
+	name = os.path.splitext(i)[0]
+	fileType = os.path.splitext(i)[1]
+	rsz = img.resize((width,height))
+	rsz.save(args.ouput + name + fileType)
+	print(name + " resized...")
 
-# print(" ")
-# print("------------------------------------")
-# print("Resize completed! :)")
-# print("------------------------------------")
-# print(" ")
+print(" ")
+print("------------------------------------")
+print("Resize completed! :)")
+print("------------------------------------")
+print(" ")
