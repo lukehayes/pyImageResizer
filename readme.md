@@ -29,6 +29,6 @@ A very simple batch image resizer written in Python.
 
 ### Example
 ````
-./py-resizer -i "../TestStock" -o "../TestOP" -w 300
+./py-resizer -i myImagesDir -o myOutputDir -w 1000
 ````
 
