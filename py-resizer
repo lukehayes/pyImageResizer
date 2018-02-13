@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser()
 # Create the flags for the script
 parser.add_argument('-i', '--imagedir', help='The location of the images to be resized.')
 parser.add_argument('-o', '--outputdir', help='The output directory of the resized images.')
-parser.add_argument('-s', '--size', help='The width of the image. The height is calculated from that number so only width is needed.', type=int)
+parser.add_argument('-w', '--width', help='The width of the image. The height is calculated from that number so only width is needed.', type=int)
 
 # Parse the new flags
 args = parser.parse_args()
@@ -23,9 +23,9 @@ else:
 # Loop through and resize each image found image
 for i in glob.glob(args.imagedir + "/*.jpg"):
 	img = Image.open(i)
-	height = args.size * img.size[1] / img.size[0]
+	height = args.width * img.size[1] / img.size[0]
 	name = os.path.basename(i)
-	rsz = img.resize((args.size,height))
+	rsz = img.resize((args.width,height))
 	rsz.save(args.outputdir + "/" + name)
 	print(name + " resized...")
 
