@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 
 # Create the flags for the script
 parser.add_argument('-i', '--imagedir', help='The location of the images to be resized.')
-parser.add_argument('-o', '--output', help='The output directory of the resized images.')
+parser.add_argument('-o', '--outputdir', help='The output directory of the resized images.')
 parser.add_argument('-s', '--size', help='The width of the image. The height is calculated from that number so only width is needed.', type=int)
 
 # Parse the new flags
