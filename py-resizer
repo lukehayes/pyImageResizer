@@ -2,8 +2,6 @@
 from PIL import Image
 import glob, os, sys, getopt
 
-currentDir = os.getcwd()
-
 # The location of the images to be resized
 imageDir = sys.argv[1]
 
