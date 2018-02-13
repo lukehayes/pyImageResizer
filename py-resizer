@@ -5,31 +5,35 @@ import glob, os, sys, getopt, argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--imagedir', help='The location of the images to be resized.')
 parser.add_argument('-o', '--output', help='The output directory of the resized images.')
-parser.add_argument('-s', '--size', help='The width of the image. The height is calculated from that number so only width is needed.')
+parser.add_argument('-s', '--size', help='The width of the image. The height is calculated from that number so only width is needed.', type=int)
 
-# The location of the images to be resized
-imageDir = sys.argv[1]
+# print(parser.imagedir)
+# print(parser.output)
+# print(parser.size)
 
-# Get the desired width from the first argument
-width = int(sys.argv[2])
+# # The location of the images to be resized
+# imageDir = sys.argv[1]
 
-# The name of the output directory
-outputDir = sys.argv[3] + "/"
+# # Get the desired width from the first argument
+# width = int(sys.argv[2])
 
-# Make the output directory
-os.mkdir(outputDir)
+# # The name of the output directory
+# outputDir = sys.argv[3] + "/"
 
-for i in glob.glob(imageDir + "/*.jpg"):
-	img = Image.open(i)
-	height = width * img.size[1] / img.size[0]
-	name = os.path.splitext(i)[0]
-	fileType = os.path.splitext(i)[1]
-	rsz = img.resize((width,height))
-	rsz.save(outputDir + name + fileType)
-	print(name + " resized...")
+# # Make the output directory
+# os.mkdir(outputDir)
 
-print(" ")
-print("------------------------------------")
-print("Resize completed! :)")
-print("------------------------------------")
-print(" ")
+# for i in glob.glob(imageDir + "/*.jpg"):
+# 	img = Image.open(i)
+# 	height = width * img.size[1] / img.size[0]
+# 	name = os.path.splitext(i)[0]
+# 	fileType = os.path.splitext(i)[1]
+# 	rsz = img.resize((width,height))
+# 	rsz.save(outputDir + name + fileType)
+# 	print(name + " resized...")
+
+# print(" ")
+# print("------------------------------------")
+# print("Resize completed! :)")
+# print("------------------------------------")
+# print(" ")
