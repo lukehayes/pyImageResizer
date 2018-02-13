@@ -27,6 +27,7 @@ will be placed and the desired width to resize the image with:
 ``` 
 
 ### Example
+Clone the project, cd into the folder and then run:
 ````
 ./py-resizer -i myImagesDir -o myOutputDir -w 1000
 ````
