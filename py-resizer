@@ -4,6 +4,9 @@ import glob, os, sys, getopt
 
 currentDir = os.getcwd()
 
+# The location of the images to be resized
+imageDir = sys.getArgv[1]
+
 # Get the desired width from the first argument
 width = int(sys.argv[1])
 
