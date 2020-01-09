@@ -13,21 +13,31 @@ parser.add_argument('-w', '--width', help='The width of the image. The height is
 # Parse the new flags
 args = parser.parse_args()
 
+if(args.imagedir == None):
+    print("\u001b[31mAn image directory needs to be set with the flag -i or --imagedir.")
+    print("\u001b[32mAdd the -h flag for help.")
+    sys.exit()
+
+if(args.outputdir == None):
+    print("\u001b[31mAn output directory needs to be set with the flag -o or --outputdir.")
+    print("\u001b[32mAdd the -h flag for help.")
+    sys.exit()
+
 # Make the output directory
 if not os.path.exists(args.outputdir):
-	print("Creating output directory: " + args.outputdir)
-	os.mkdir(args.outputdir)
+        print("Creating output directory: " + args.outputdir)
+        os.mkdir(args.outputdir)
 else:
-	print("Directory: " + args.outputdir + " already exists. Moving on...")
+        print("Directory: " + args.outputdir + " already exists. Moving on...")
 
 # Loop through and resize each image found image
 for i in glob.glob(args.imagedir + "/*.jpg"):
-	img = Image.open(i)
-	height = args.width * img.size[1] / img.size[0]
-	name = os.path.basename(i)
-	rsz = img.resize((args.width,height))
-	rsz.save(args.outputdir + "/" + name)
-	print(name + " resized...")
+        img = Image.open(i)
+        height = args.width * img.size[1] / img.size[0]
+        name = os.path.basename(i)
+        rsz = img.resize((args.width,height))
+        rsz.save(args.outputdir + "/" + name)
+        print(name + " resized...")
 
 print(" ")
 print("------------------------------------")
