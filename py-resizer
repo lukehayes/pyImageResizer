@@ -30,14 +30,24 @@ if not os.path.exists(args.outputdir):
 else:
         print("Directory: " + args.outputdir + " already exists. Moving on...")
 
+
+# Search the directory for .jpg files
+directory_search = glob.glob(args.imagedir + "/*.jpg")
+
+# If no images are found, then quit
+if( len(directory_search) < 1):
+    print("No images where found in the given directory: " + args.imagedir)
+    sys.exit()
+
 # Loop through and resize each image found image
-for i in glob.glob(args.imagedir + "/*.jpg"):
-        img = Image.open(i)
-        height = args.width * img.size[1] / img.size[0]
-        name = os.path.basename(i)
-        rsz = img.resize((args.width,height))
-        rsz.save(args.outputdir + "/" + name)
-        print(name + " resized...")
+for i in directory_search:
+    print(len(i))
+    img = Image.open(i)
+    height = args.width * img.size[1] / img.size[0]
+    name = os.path.basename(i)
+    rsz = img.resize((args.width,height))
+    rsz.save(args.outputdir + "/" + name)
+    print(name + " resized...")
 
 print(" ")
 print("------------------------------------")
