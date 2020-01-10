@@ -2,7 +2,9 @@
 A simple Python script that will resize images to a given width and height
 
 ### Dependencies
-[Python Pillow Library](https://pillow.readthedocs.io/en/latest/)
+* Python3
+* Pip Package Manager
+* [Python Pillow Library](https://pillow.readthedocs.io/en/latest/)
 
 ### Options
 There are options for setting the location directory of the images to be resized, the output directory the resized images
