@@ -13,18 +13,27 @@ will be placed and the desired width to resize the image with:
 ###### Image directory
 ``` 
 --imageDir 'myImageDir'
+
+or
+
 -i 'myImageDir'
 ``` 
 
 ###### Output directory
 ``` 
 --outputdir 'myTestOutputDir'
+
+or
+
 -o 'myTestOutputDir'
 ``` 
 
 ###### Image width
 ``` 
 --width 1000
+
+or
+
 -w 1000
 ``` 
 
