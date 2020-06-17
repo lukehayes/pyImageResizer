@@ -42,4 +42,5 @@ Clone the project, cd into the folder and then run:
 ````
 ./py-resizer -i myImagesDir -o myOutputDir -w 1000
 ````
+In this example -w sets the width and the height is calculated from that.
 
