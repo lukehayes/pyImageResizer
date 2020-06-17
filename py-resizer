@@ -13,11 +13,13 @@ parser.add_argument('-w', '--width', help='The width of the image. The height is
 # Parse the new flags
 args = parser.parse_args()
 
+# We are missing the -imagedir flag
 if(args.imagedir == None):
     print("\u001b[31mAn image directory needs to be set with the flag -i or --imagedir.")
     print("\u001b[32mAdd the -h flag for help.")
     sys.exit()
 
+# We are missing the -outputdir flag
 if(args.outputdir == None):
     print("\u001b[31mAn output directory needs to be set with the flag -o or --outputdir.")
     print("\u001b[32mAdd the -h flag for help.")
